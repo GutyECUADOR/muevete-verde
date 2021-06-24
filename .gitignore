@@ -1,0 +1,5 @@
+composer.phar
+/vendor/
+.env
+api/error_log
+error_log
