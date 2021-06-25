@@ -9,17 +9,17 @@
           </div>
           <!--end of col-->
           <div class="col-12 col-md-7 col-lg-4 mb-4 text-center" style="margin-top: -25px;">
-            <a href="?action=colombia"><img alt="Image" src="assets/img/Bandera-colombia.png" class="w-50 zoom mb-2" /></a>
+            <a href="?action=login&pais=colombia"><img alt="Image" src="assets/img/Bandera-colombia.png" class="w-50 zoom mb-2" /></a>
             <h2 class="h1 text-dark">Colombia</h2>
           </div>
           <!--end of col-->
           <div class="col-12 col-md-7 col-lg-4 mb-4 text-center" style="margin-top: -25px;">
-            <a href="?action=ecuador"><img alt="Image" src="assets/img/Bandera-ecuador.png" class="w-50 zoom mb-2" /></a>
+            <a href="?action=login&pais=ecuador"><img alt="Image" src="assets/img/Bandera-ecuador.png" class="w-50 zoom mb-2" /></a>
             <h2 class="h1 text-dark">Ecuador</h2>
           </div>
           <!--end of col-->
           <div class="col-12 col-md-7 col-lg-4 text-center" style="margin-top: -25px;">
-            <a href="?action=peru"><img alt="Image" src="assets/img/Bandera-peru.png" class="w-50 zoom mb-2" /></a>
+            <a href="?action=login&pais=peru"><img alt="Image" src="assets/img/Bandera-peru.png" class="w-50 zoom mb-2" /></a>
             <h2 class="h1 text-dark">Perú</h2>
           </div>
           <!--end of col-->

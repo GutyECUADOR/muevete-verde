@@ -28,7 +28,7 @@
 */
 
 .primary-color{
-  color:#98C328;
+  color:#98C328 !important;
 }
 
 .secondary-color{
@@ -41,6 +41,22 @@
 
 .quartary-color{
   color:#C35889;
+}
+
+.primary-color-background{
+  background-color:#98C328;
+}
+
+.secondary-color-background{
+  background-color:#EDF0F0;
+}
+
+.tertiary-color-background{
+  background-color:#357B93;
+}
+
+.quartary-color-background{
+  background-color:#C35889;
 }
 
 
@@ -133,8 +149,8 @@
  position:fixed;
  width:60px;
  height:60px;
- bottom:73%;
- right:40px;
+ bottom:5%;
+ right:5px;
  background-color:#25d366;
  color:#FFF;
  border-radius:50px;
@@ -195,7 +211,7 @@
   font-size: 30px;
 }
 
-.float{
+/* .float{
   right:5px;
   bottom:73%;
 }
@@ -203,6 +219,6 @@
 .float2{
   right:5px;
   bottom:85%;
-}
+} */
 }
 

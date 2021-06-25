@@ -7,12 +7,19 @@ class RouteModel {
             case 'bienvenidos':
                 $contenido = "views/modulos/bienvenidosView.php";
                 break;
+            
+            case 'login':
+                $contenido = "views/modulos/loginView.php";
+                break;   
+
+            case 'register':
+                $contenido = "views/modulos/registerView.php";
+                break;
 
             case 'colombia':
                 $contenido = "views/modulos/colombiaView.php";
                 break;
                 
-
             case 'ecuador':
                 $contenido = "views/modulos/ecuadorView.php";
                 break;
