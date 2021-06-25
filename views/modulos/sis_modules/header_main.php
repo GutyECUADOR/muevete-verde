@@ -22,11 +22,6 @@
       </div>
       
     </div>
-    <div class="row" style="width: 100%;">
-      <div class="col">
-        <img alt="Image" clsss="responsive-image" src="assets/img/logo.png" style="width: 25%;"/>
-      </div>
-      
-    </div>
+    
   </div>
 </div>

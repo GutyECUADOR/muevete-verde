@@ -13,7 +13,7 @@ class LoginController  {
 
     public function checkLogin(){
         if (isset($_POST['cedula']) && isset($_POST['telefono']) && isset($_POST['pais'])) {
-            $arrayDatos = array("usuario"=>$_POST['cedula'],"password"=>$_POST['telefono']);
+            $arrayDatos = array("cedula"=>$_POST['cedula'],"telefono"=>$_POST['telefono']);
             $arrayResultados = $this->loginModel->validaIngreso($arrayDatos);
               
             if (!empty($arrayResultados)) {
@@ -21,7 +21,11 @@ class LoginController  {
                     { 
                         session_start(); 
                     } 
-                $_SESSION["usuario_nombres".APP_UNIQUE_KEY] =  trim($arrayResultados['nombres']);
+                    $_SESSION["usuario_email".APP_UNIQUE_KEY] =  trim($arrayResultados['email']);
+                    $_SESSION["usuario_nombres".APP_UNIQUE_KEY] =  trim($arrayResultados['nombres']);
+                    $_SESSION["usuario_cedula".APP_UNIQUE_KEY] =  trim($arrayResultados['cedula']);
+                    $_SESSION["usuario_telefono".APP_UNIQUE_KEY] =  trim($arrayResultados['telefono']);
+                    $_SESSION["usuario_rol".APP_UNIQUE_KEY] =  trim($arrayResultados['rol']);
                 header("Location: index.php?&action=dashboard");
                     
             }else{

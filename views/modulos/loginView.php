@@ -23,7 +23,7 @@ use App\Controllers\loginController;
                 <div class="card-body">
                   <div class="mb-2">
                   <div class="col-12 text-center">
-                    <a href="?action=bienvenidos"><img alt="Image" src="assets/img/logo.png" class="w-50" /></a>
+                    <a href="?action=bienvenidos"><img alt="Image" src="assets/img/logo.png" class="w-100" /></a>
                     
                   </div>
                     <span class="text-uppercase primary-color">Ingresa a tu cuenta y revisa tus puntos</span>
