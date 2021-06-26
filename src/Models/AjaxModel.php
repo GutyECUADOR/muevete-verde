@@ -60,8 +60,8 @@ class AjaxModel extends Conexion  {
             $this->instancia->beginTransaction();  
             $query = " 
                 INSERT INTO 
-                usuarios (nombres, fechaNacimiento, cedula, telefono, genero, email, password, ciudad, puntoVenta, NIT, rol, status)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, '1', '1')
+                usuarios (nombres, fechaNacimiento, cedula, telefono, genero, email, password, pais, ciudad, puntoVenta, NIT, rol, status)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, '1', '1')
             ";  
 
             $stmt = $this->instancia->prepare($query); 
@@ -72,9 +72,10 @@ class AjaxModel extends Conexion  {
             $stmt->bindParam(5, $cliente->genero); 
             $stmt->bindParam(6, $cliente->email); 
             $stmt->bindParam(7, $cliente->password); 
-            $stmt->bindParam(8, $cliente->ciudad); 
-            $stmt->bindParam(9, $cliente->puntoVenta); 
-            $stmt->bindParam(10, $cliente->NIT); 
+            $stmt->bindParam(8, $cliente->pais); 
+            $stmt->bindParam(9, $cliente->ciudad); 
+            $stmt->bindParam(10, $cliente->puntoVenta); 
+            $stmt->bindParam(11, $cliente->NIT); 
 
             $stmt->execute();
 

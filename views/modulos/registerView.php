@@ -17,8 +17,9 @@ if (isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
                     <span class="text-uppercase primary-color font-weight-bold">Informacion personal</span>
                   </div>
                   <!--form-->
-                  <form @submit="addNewCliente()" method="POST">
+                  <form @submit.prevent="addNewCliente()" method="POST">
                     <div>
+
                       <div class="form-group">
                         <label for="nombre">Nombre Completo</label>
                         <input type="text" v-model="cliente.nombres" class="form-control form-control-sm text-uppercase" id="nombre" placeholder="Ingrese su nombre y apellido" maxlength="200" required>
@@ -63,7 +64,7 @@ if (isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
                   </form>
 
                   <div class="text-center mt-3 mb-3">
-                      <span>¿Ya tienes una cuenta? <a class="primary-color" href="?action=login">Ingresa aquí</a>
+                      <span>¿Ya tienes una cuenta? <a class="primary-color" href="?action=bienvenidos">Ingresa aquí</a>
                       </span>
                   </div>
                 </div>

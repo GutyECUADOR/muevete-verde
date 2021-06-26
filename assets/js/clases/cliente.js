@@ -12,6 +12,7 @@ class Cliente {
       this.puntoVenta = 0;
       this.NIT = 0;
       this.genero = 'M';
+      this.pais = location.search.split('pais=')[1]
       this.terminos = false
     }
 

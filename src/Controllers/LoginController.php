@@ -26,6 +26,7 @@ class LoginController  {
                     $_SESSION["usuario_cedula".APP_UNIQUE_KEY] =  trim($arrayResultados['cedula']);
                     $_SESSION["usuario_telefono".APP_UNIQUE_KEY] =  trim($arrayResultados['telefono']);
                     $_SESSION["usuario_rol".APP_UNIQUE_KEY] =  trim($arrayResultados['rol']);
+                    $_SESSION["usuario_pais".APP_UNIQUE_KEY] =  trim($arrayResultados['pais']);
                 header("Location: index.php?&action=dashboard");
                     
             }else{

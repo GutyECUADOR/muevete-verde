@@ -29,7 +29,7 @@
       <!--end of container-->
     </section>
     <!--end of section-->
-    <section class="space-sm flush-with-above" style="z-index: 2; margin-top:-50px">
+    <section class="space-sm flush-with-above" style="z-index: 2;">
       <div class="container">
         <div class="row">
           <div class="col text-center">

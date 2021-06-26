@@ -28,9 +28,9 @@
         </ul>
 
         <ul class="navbar-nav">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a href="index.php?action=ranking" class="nav-link custom-link <?php echo getActive('ranking')?>">Ranking</a>
-        </li>
+        </li> -->
         <li class="nav-item">
             <a href="#" data-toggle="modal" data-target="#terminosModal <?php echo getActive('terminosmodal')?>" class="nav-link custom-link">Términos & Condiciones</a>
         </li>

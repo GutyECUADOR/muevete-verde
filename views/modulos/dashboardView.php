@@ -1,4 +1,7 @@
 <?php
+use App\Controllers\loginController;
+$login = new loginController();
+
 if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
     header("Location:index.php?&action=login");  
  }   
@@ -50,6 +53,10 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
                       <div class="media">
                       <div class="media-body">
                         <div class="mb-3">
+                          <?php 
+                            $flag = $login->getFlag($_SESSION["usuario_pais".APP_UNIQUE_KEY]);
+                            echo '<img alt="Image" src="assets/img/'.$flag.'" class="w-25 zoom mb-3" />';
+                          ?>
                           <h1 class="h2 mb-2"><?php echo $_SESSION["usuario_nombres".APP_UNIQUE_KEY] ?></h1>
                           <span class="text-muted"><?php echo $_SESSION["usuario_cedula".APP_UNIQUE_KEY] ?></span>
                           
@@ -76,8 +83,8 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
                   <div class="col-12 card-body text-center text-dark" style="background: rgb(242, 206, 62); padding: 10px;">
                     <div class="col-12">
                       <div class="container">
-                        <div class="row">
-                          <small>Por cada MIL PESOS COP $1,000.oo en compras entre el 15 de Febrero - hasta el 15 de Marzo de 2021 en Productos Ramo, el participante recibirá UN (1) punto.</small>
+                        <div class="row d-flex justify-content-center">
+                        
                         </div>
                         
                       </div>
