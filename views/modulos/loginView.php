@@ -21,11 +21,16 @@ use App\Controllers\loginController;
                 
 
                 <div class="card-body">
-                  <div class="mb-2">
+                  <div class="mb-2 text-center">
                   <div class="col-12 text-center">
                     <a href="?action=bienvenidos"><img alt="Image" src="assets/img/logo.png" class="w-100" /></a>
-                    
+                    <?php 
+                      $flag = $login->getFlag($pais);
+                      echo '<img alt="Image" src="assets/img/'.$flag.'" class="w-25 zoom mb-3" />';
+                    ?>
+                   
                   </div>
+                    
                     <span class="text-uppercase primary-color">Ingresa a tu cuenta y revisa tus puntos</span>
                    
                   </div>

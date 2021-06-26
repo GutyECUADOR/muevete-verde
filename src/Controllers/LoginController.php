@@ -39,6 +39,26 @@ class LoginController  {
         }
     }
 
+    public function getFlag($pais){
+        switch ($pais) {
+            case 'colombia':
+                return 'Bandera-colombia.png'; 
+                break;
+
+            case 'ecuador':
+                return 'Bandera-ecuador.png'; 
+                break;
+
+            case 'peru':
+                return 'Bandera-peru.png'; 
+                break;
+        
+            default:
+                return 'Bandera-colombia.png'; 
+                break;
+        }
+    }
+
     public function getAllDataBaseList(){
         $opciones = $this->loginModel->getAllDataBaseList();
 

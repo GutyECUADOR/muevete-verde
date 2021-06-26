@@ -12,6 +12,10 @@ class RouteModel {
                 $contenido = "views/modulos/loginView.php";
                 break;   
 
+            case 'logout':
+                $contenido = "views/modulos/cerrarSesion.php";
+                break;   
+
             case 'register':
                 $contenido = "views/modulos/registerView.php";
                 break;

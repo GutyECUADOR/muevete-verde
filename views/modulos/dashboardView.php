@@ -42,7 +42,7 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
           <?php require_once 'sis_modules/navbarnotop.php'?>
 
           <div class="row flex-md-row card card-lg border-0 mb-0">
-            <div class="col-12 col-md-4 text-center text-light" style="background:#266fbf">
+            <div class="col-12 col-md-4 text-center text-dark primary-color-background">
               <div class="container">
                 <div class="row" style="min-height: 300px;">
                   <div class="container mt-4">
