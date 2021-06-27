@@ -9,14 +9,13 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
 ?> 
 
     <div id="app" class="main-container main-background">
-      <section style="padding: 0px !important;">
+      <section class="p-0 pb-3">
         <div class="container">
           
         <div class="row">
           <div class="col d-flex justify-content-center">
             <img alt="Image" clsss="responsive-image" src="assets/img/logo.png" style="width: 50%;"/>
           </div>
-          
         </div>
 
         <div class="row">

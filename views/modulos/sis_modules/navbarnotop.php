@@ -11,7 +11,7 @@
 
 <nav class="navbar navbar-expand-lg">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="icon-menu h4"></i>
+        <i class="icon-menu h4">Menú</i>
     </button>
     <div class="collapse navbar-collapse justify-content-center text-uppercase" id="navbarNav">
         <ul class="navbar-nav">
@@ -28,9 +28,9 @@
         </ul>
 
         <ul class="navbar-nav">
-        <!-- <li class="nav-item">
+        <li class="nav-item">
             <a href="index.php?action=ranking" class="nav-link custom-link <?php echo getActive('ranking')?>">Ranking</a>
-        </li> -->
+        </li>
         <li class="nav-item">
             <a href="#" data-toggle="modal" data-target="#terminosModal <?php echo getActive('terminosmodal')?>" class="nav-link custom-link">Términos & Condiciones</a>
         </li>

@@ -25,7 +25,17 @@ class RouteModel {
                 break;
 
             case 'comoparticipar':
-                $contenido = "views/modulos/comoparticiparView.php";
+                if ($_SESSION["usuario_pais".APP_UNIQUE_KEY] == 'ecuador') {
+                    $contenido = "views/modulos/comoparticiparView-Ecuador.php";
+                }elseif ($_SESSION["usuario_pais".APP_UNIQUE_KEY] == 'colombia') {
+                    $contenido = "views/modulos/comoparticiparView-Colombia.php";
+                }elseif ($_SESSION["usuario_pais".APP_UNIQUE_KEY] == 'peru') {
+                    $contenido = "views/modulos/comoparticiparView-Peru.php";
+                }
+                else{
+                    $contenido = "views/modulos/comoparticiparView-Colombia.php";
+                }
+                
                 break;
 
             case 'premios':

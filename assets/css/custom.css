@@ -59,6 +59,10 @@
   background-color:#C35889;
 }
 
+.bg-transparent{
+  background: transparent !important;
+}
+
 
 
 .main-gradient{
@@ -87,11 +91,10 @@
 }
 
 .container-balanza{
-   background-image: url("../img/balanza.png");
-   background-size: 85%;
+   background-image: url("../img/hoja.png");
    background-repeat: no-repeat;
    background-position: center;
-   padding: 20px;
+   padding: 85px;
    padding-left: 20%;
    font-size: 2rem;
 }
