@@ -1,5 +1,5 @@
 <?php
-use App\Controllers\ajaxController;
+use App\Controllers\AjaxController;
 use Dotenv\Dotenv;
 
 @ob_start();
@@ -20,7 +20,7 @@ class ajax{
   private $ajaxController;
    
     public function __construct() {
-      $this->ajaxController = new ajaxController();
+      $this->ajaxController = new AjaxController();
     }
 
     public function getInfoInitForm() {

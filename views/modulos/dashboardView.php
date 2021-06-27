@@ -1,6 +1,6 @@
 <?php
-use App\Controllers\loginController;
-$login = new loginController();
+use App\Controllers\LoginController;
+$login = new LoginController();
 
 if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
     header("Location:index.php?&action=login");  

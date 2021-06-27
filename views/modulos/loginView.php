@@ -1,12 +1,12 @@
 <?php 
 
-use App\Controllers\loginController;
+use App\Controllers\LoginController;
 
     if (isset($_SESSION["usuarioRUC"])){
         header('location:index.php?action=inicio');  
     }
     
-    $login = new loginController();
+    $login = new LoginController();
     $pais = isset($_GET["pais"]) ? $_GET["pais"] : '';
     
 
