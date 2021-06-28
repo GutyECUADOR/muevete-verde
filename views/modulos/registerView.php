@@ -70,9 +70,9 @@ if (isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
                         <input type="email" v-model="cliente.email" class="form-control form-control-sm" id="email" placeholder="Indique su email" maxlength="50">
                       </div>
                       <div class="">
-                        <div class="custom-control custom-checkbox">
+                        <div class="custom-control custom-checkbox primary-color">
                           <input type="checkbox" v-model="cliente.terminos" class="custom-control-input" value="agree" name="agree-terms" id="check-agree">
-                          <label class="custom-control-label text-justify small" for="check-agree">He leído y aceptado los Términos y condiciones, y autorizo el tratamiento de mis datos personales para participar en la Actividad promocional.</a>
+                          <label class="custom-control-label text-justify small primary-color" for="check-agree">He leído y aceptado los Términos y condiciones, y autorizo el tratamiento de mis datos personales para participar en la Actividad promocional.</label>
                           </label>
                         </div>
                       </div>

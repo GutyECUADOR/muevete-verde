@@ -24,6 +24,10 @@
         <li class="nav-item">
             <a href="index.php?action=premios" class="nav-link custom-link <?php echo getActive('premios')?>">Premios</a>
         </li>
+
+        <li class="nav-item">
+            <a href="index.php?action=informacion" class="nav-link custom-link <?php echo getActive('informacion')?>">Información</a>
+        </li>
         
         </ul>
 

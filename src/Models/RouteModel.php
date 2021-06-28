@@ -42,6 +42,10 @@ class RouteModel {
                 $contenido = "views/modulos/premiosView.php";
                 break;
 
+            case 'informacion':
+                $contenido = "views/modulos/informacionView.php";
+                break;
+
             case 'ranking':
                 $contenido = "views/modulos/rankingView.php";
                 break;   
