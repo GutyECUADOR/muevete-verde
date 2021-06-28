@@ -68,6 +68,9 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
             <div class="row text-center">
                 <img alt="Image" src="assets/img/moto.png" class="img-fluid rounded" style="display: block;margin-left: auto;margin-right: auto;" />  
             </div>
+            <div class="row text-center">
+                <img alt="Image" src="assets/img/PERU_MOTO.png" class="img-fluid rounded" style="display: block;margin-left: auto;margin-right: auto; width: 85%;" />  
+            </div>
           </div>
         </div>
         <div class="col-12 col-md-2" style="background:#fff">
@@ -77,6 +80,9 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
               </div>
             <div class="row text-center">
                 <img alt="Image" src="assets/img/bici.png" class="img-fluid rounded" style="display: block;margin-left: auto;margin-right: auto; width: 85%;" />  
+            </div>
+            <div class="row text-center">
+                <img alt="Image" src="assets/img/PERU_CICLA.png" class="img-fluid rounded" style="display: block;margin-left: auto;margin-right: auto; width: 95%;" />  
             </div>
           </div>
         </div>
@@ -88,6 +94,9 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
             <div class="row text-center">
                 <img alt="Image" src="assets/img/scooter.png" class="img-fluid rounded" style="display: block;margin-left: auto;margin-right: auto; width: 51%;" />  
             </div>
+            <div class="row text-center mt-2">
+                <img alt="Image" src="assets/img/PERU_PATINETA.png" class="img-fluid rounded" style="display: block;margin-left: auto;margin-right: auto; width: 85%;" />  
+            </div>
           </div>
         </div>
         <div class="col-12 col-md-2" style="background-color:#fff">
@@ -96,7 +105,10 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
                 <h4 class="mb-3 mt-3" style="font-weight:bold; color:#266fbf; line-height: 2rem">BONOS </br>DIGITALES</h2>
               </div>
             <div class="row text-center">
-                <img alt="Image" src="assets/img/bonos-netflix.png" class="img-fluid rounded" style="display: block;margin-left: auto;margin-right: auto; width: 85%;" />  
+                <img alt="Image" src="assets/img/bonos-netflix.png" class="img-fluid rounded" style="display: block;margin-left: auto;margin-right: auto; width: 90%;" />  
+            </div>
+            <div class="row text-center mt-4">
+                <img alt="Image" src="assets/img/PERU_BONOS.png" class="img-fluid rounded" style="display: block;margin-left: auto;margin-right: auto; width: 85%;" />  
             </div>
           </div>
         </div>

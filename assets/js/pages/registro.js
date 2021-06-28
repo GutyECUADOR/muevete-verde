@@ -78,11 +78,9 @@ const app = new Vue({
                 return response.json();
             })
             .then(data => {
+                var location = `./index.php?action=login&pais=${this.cliente.pais}`;
                 console.log(data)
                 if (data.status == 'success') {
-                    //alert(data.mensaje);
-                    this.cliente = new Cliente();
-
                     swal({
                     title: "Listo!!!",
                     text: data.mensaje,
@@ -93,7 +91,8 @@ const app = new Vue({
                     closeOnConfirm: false
                     },
                     function(){
-                        window.location = './index.php?action=login'
+                        window.location = location;
+                        this.cliente = new Cliente();
                     });
 
                    

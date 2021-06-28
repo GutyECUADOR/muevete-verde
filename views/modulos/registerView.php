@@ -1,4 +1,8 @@
 <?php
+use App\Controllers\LoginController;
+$login = new LoginController();
+$pais = isset($_GET["pais"]) ? $_GET["pais"] : 'colombia';
+
 if (isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
     header("Location:index.php?&action=dashboard");  
  } 
@@ -10,8 +14,22 @@ if (isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
         <div class="container">
           <div class="row flex-md-row card card-lg border-0">
             <div class="col-12 col-md-6 card-body" style="padding: 1rem !important">
+              <div class="row">
+              <div class="col-12 justify-content-center text-center">
+                <h5 class="primary-color">Estás participando para la promoción de</h5>
+              </div>
               
-              <div class="row justify-content-center mt-3 mb-2">
+              <div class="col-12 justify-content-center text-center mt-2">
+              <?php 
+                  $flag = $login->getFlag($pais);
+                  echo '<img alt="Image" src="assets/img/'.$flag.'" class="w-25 zoom mb-3" />';
+                ?>
+              </div>
+               
+              
+              </div>
+              
+              <div class="row justify-content-center mb-2">
                 <div class="col-12 col-lg-9">
                   <div class="mb-1">
                     <span class="text-uppercase primary-color font-weight-bold">Informacion personal</span>

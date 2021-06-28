@@ -101,7 +101,7 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
                 <div class="text-center">
                   <h3 class="h3 text-left text-bold">Mis Puntos</h3>
                   <div class="container-balanza">
-                      <h3 style="color: #ffdc00 !important; font-weight: bold; font-size:2.5rem" class="display-4" data-aos="zoom-out" data-aos-delay="100">{{totalKilos}} PTS.</h3>
+                      <h3 style="color: #ffdc00 !important; font-weight: bold; font-size:2.5rem; padding-top: 50px;" class="display-4" data-aos="zoom-out" data-aos-delay="100">{{totalKilos}} PTS.</h3>
                   </div>
                 </div>
               

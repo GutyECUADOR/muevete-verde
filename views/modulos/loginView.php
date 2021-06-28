@@ -7,7 +7,7 @@ use App\Controllers\LoginController;
     }
     
     $login = new LoginController();
-    $pais = isset($_GET["pais"]) ? $_GET["pais"] : '';
+    $pais = isset($_GET["pais"]) ? $_GET["pais"] : 'colombia';
     
 
 ?>

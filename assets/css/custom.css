@@ -91,12 +91,11 @@
 }
 
 .container-balanza{
-   background-image: url("../img/hoja.png");
-   background-repeat: no-repeat;
-   background-position: center;
-   padding: 85px;
-   padding-left: 20%;
-   font-size: 2rem;
+  background-image: url(../img/hoja.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  min-height: 150px;
 }
 
 
