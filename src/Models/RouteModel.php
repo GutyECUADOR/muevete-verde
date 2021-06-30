@@ -35,11 +35,19 @@ class RouteModel {
                 else{
                     $contenido = "views/modulos/comoparticiparView-Colombia.php";
                 }
-                
                 break;
 
             case 'premios':
-                $contenido = "views/modulos/premiosView.php";
+                if ($_SESSION["usuario_pais".APP_UNIQUE_KEY] == 'ecuador') {
+                    $contenido = "views/modulos/premiosView-Ecuador.php";
+                }elseif ($_SESSION["usuario_pais".APP_UNIQUE_KEY] == 'colombia') {
+                    $contenido = "views/modulos/premiosView-Colombia.php";
+                }elseif ($_SESSION["usuario_pais".APP_UNIQUE_KEY] == 'peru') {
+                    $contenido = "views/modulos/premiosView-Ecuador.php";
+                }
+                else{
+                    $contenido = "views/modulos/premiosView-Colombia.php";
+                }
                 break;
 
             case 'informacion':
