@@ -4,7 +4,7 @@ body {
 }
 
 .flipper {
-  color: #ff6002;
+  color: #023F88;
   display: block;
   font-size: 50px;
   line-height: 100%;
@@ -26,7 +26,7 @@ body {
 }
 .flipper-group label {
   position: absolute;
-  color: #fff;
+  color: #023F88;
   font-size: 20%;
   top: 100%;
   line-height: 1em;
@@ -57,7 +57,7 @@ body {
   float: left;
   padding: 0;
   margin: 0;
-  color: #fff;
+  color: #023F88;
   min-width: .1em;
   white-space: nowrap;
   display: block;
@@ -239,7 +239,7 @@ body {
   color: #fff;
 }
 .flipper-dark .flipper-delimiter {
-  color: #333;
+  color: rgb(156, 150, 150);
 }
 .flipper-dark .digit-next {
   background: #333;

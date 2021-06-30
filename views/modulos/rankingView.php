@@ -14,18 +14,18 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
           <?php require_once 'sis_modules/navbarnotop.php'?>
         
           <section>
-            <div class="container text-light">
+            <div class="container text-dark">
               <div class="row justify-content-center text-center section-intro">
                 <div class="col-12 col-md-9 col-lg-8">
-                    <span class="display-5 lead mt-4 text-uppercase" style="text-shadow: rgb(8, 0, 0) 0px 1px; font-size:2rem; color: #ffd987;">
+                    <span class="display-5 lead mt-4 text-uppercase" style="text-shadow: rgb(8, 0, 0) 0px 1px; font-size:2rem; color: #023F88;">
                       Pronto conocerás si eres uno de </br> los que más puntos ha acumulado
                     </span>
 
                     <div 
                       class="flipper" 
-                      data-datetime="2021-03-16 00:00:00"
+                      data-datetime="2021-08-15 00:00:00"
                       data-reverse="true" 
-                      data-template="d|H|i|s" 
+                      data-template="dd|HH|ii|ss" 
                       data-labels="Dias|Horas|Minutos|Segundos" 
                       id="modalFlipper">
                     </div>
