@@ -118,4 +118,9 @@ use App\Controllers\LoginController;
     <!-- Required theme scripts (Do not remove) -->
     <script type="text/javascript" src="assets/js/theme.js"></script>
 
+    <!-- Hojas Background --> 
+    <script type="text/javascript" src="assets/js/jquery.rotate.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.classyleaves.min.js"></script>
+    <script type="text/javascript" src="assets/js/inithojas.js"></script>
+
       

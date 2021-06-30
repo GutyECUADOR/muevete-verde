@@ -1,7 +1,7 @@
 
 <div class="main-container main-background">
   <div class="fireworksNO">
-    <section class="height-100 flush-with-above" style="z-index: 2; padding:0px">
+    <section class="height-100 flush-with-above" style=" padding:0px">
       <div class="container text-white mt-5">
         <div class="row justify-content-between">
           <div class="col-12 text-center">
@@ -29,11 +29,11 @@
       <!--end of container-->
     </section>
     <!--end of section-->
-    <section class="space-sm flush-with-above" style="z-index: 2;">
+    <section class="space-sm flush-with-above" >
       <div class="container">
         <div class="row">
           <div class="col text-center">
-             <a href="#" style="z-index: 2; padding-top:1px" data-toggle="modal" data-target="#terminosModal" class="text-dark">Términos & Condiciones</a>
+             <a href="#" style=" padding-top:1px" data-toggle="modal" data-target="#terminosModal" class="text-dark">Términos & Condiciones</a>
           </div>
           <!--end of col-->
         </div>
@@ -69,24 +69,8 @@
 <!-- <script type="text/javascript" src="assets/js/jquery.fireworks.js"></script> -->
 <script type="text/javascript" src="assets/js/jquery.rotate.js"></script>
 <script type="text/javascript" src="assets/js/jquery.classyleaves.min.js"></script>
+<script type="text/javascript" src="assets/js/inithojas.js"></script>
 
-<script>
-    $(document).ready(function() {
-        var tree = new ClassyLeaves({
-            leaves: 30,
-            maxY: -10,
-            multiplyOnClick: true,
-            multiply: 2,
-            infinite: true,
-            speed: 2000
-        });
-        $('body').on('click', '.addLeaf', function() {
-            console.log('8');
-            tree.add(8);
-            return false;
-        });
-    });
-</script>
 
 <!-- <script type="text/javascript" >
   $('.fireworks').fireworks();

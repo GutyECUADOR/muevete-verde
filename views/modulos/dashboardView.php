@@ -13,8 +13,8 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
         <div class="container">
           
         <div class="row">
-          <div class="col d-flex justify-content-center">
-            <img alt="Image" clsss="responsive-image" src="assets/img/logo.png" style="width: 50%;"/>
+          <div class="col d-flex justify-content-center mt-5">
+            <img alt="Image" clsss="responsive-image" src="assets/img/logo.png"/>
           </div>
         </div>
 
@@ -83,12 +83,13 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
                     <div class="col-12">
                       <div class="container">
                         <div class="row d-flex justify-content-center">
-                        
+                            <p>Promoción válida del 15 de julio al 30 de septiembre de 2021. <br> Aplican términos y condiciones.</p>
+                          
                         </div>
                         
                       </div>
+                    </div>
                   </div>
-                </div>
                 </div>
               </div>
 
@@ -181,6 +182,12 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
 
     <!-- Required theme scripts (Do not remove) -->
     <script type="text/javascript" src="assets/js/theme.js"></script>
+
+    <!-- Hojas Background --> 
+    <script type="text/javascript" src="assets/js/jquery.rotate.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.classyleaves.min.js"></script>
+    <script type="text/javascript" src="assets/js/inithojas.js"></script>
+
 
      <!-- VUE y Scripts de la pagina-->
     <script src="assets\js\vue.js"></script>

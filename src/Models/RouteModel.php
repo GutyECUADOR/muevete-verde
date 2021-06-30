@@ -43,7 +43,7 @@ class RouteModel {
                 }elseif ($_SESSION["usuario_pais".APP_UNIQUE_KEY] == 'colombia') {
                     $contenido = "views/modulos/premiosView-Colombia.php";
                 }elseif ($_SESSION["usuario_pais".APP_UNIQUE_KEY] == 'peru') {
-                    $contenido = "views/modulos/premiosView-Ecuador.php";
+                    $contenido = "views/modulos/premiosView-Peru.php";
                 }
                 else{
                     $contenido = "views/modulos/premiosView-Colombia.php";

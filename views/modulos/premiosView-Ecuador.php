@@ -12,8 +12,8 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
   <section class="p-0 pb-3">
     <div class="container">
       <div class="row">
-        <div class="col d-flex justify-content-center">
-          <img alt="Image" clsss="responsive-image" src="assets/img/logo.png" style="width: 50%;"/>
+        <div class="col d-flex justify-content-center mt-5">
+          <img alt="Image" clsss="responsive-image" src="assets/img/logo.png"/>
         </div>
       </div>
       <!--navbar-->
@@ -129,6 +129,12 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/popper.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+<!-- Hojas Background --> 
+<script type="text/javascript" src="assets/js/jquery.rotate.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.classyleaves.min.js"></script>
+    <script type="text/javascript" src="assets/js/inithojas.js"></script>
+
+
 
 <script>
   $(document).ready(function() {
