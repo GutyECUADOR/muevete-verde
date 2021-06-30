@@ -19,15 +19,18 @@
             <a href="index.php?action=dashboard" class="nav-link custom-link <?php echo getActive('dashboard')?>">Mi cuenta</a>
         </li>
         <li class="nav-item">
+            <a href="#" data-toggle="modal" data-target="#terminosModal <?php echo getActive('terminosmodal')?>" class="nav-link custom-link">Términos & Condiciones</a>
+        </li>
+        <li class="nav-item">
             <a href="index.php?action=comoparticipar" class="nav-link custom-link <?php echo getActive('comoparticipar')?>">Cómo participar</a>
+        </li>
+        <li class="nav-item">
+            <a href="index.php?action=informacion" class="nav-link custom-link <?php echo getActive('informacion')?>">Información</a>
         </li>
         <li class="nav-item">
             <a href="index.php?action=premios" class="nav-link custom-link <?php echo getActive('premios')?>">Premios</a>
         </li>
-
-        <li class="nav-item">
-            <a href="index.php?action=informacion" class="nav-link custom-link <?php echo getActive('informacion')?>">Información</a>
-        </li>
+        
         
         </ul>
 
@@ -35,9 +38,7 @@
         <li class="nav-item">
             <a href="index.php?action=ranking" class="nav-link custom-link <?php echo getActive('ranking')?>">Ranking</a>
         </li>
-        <li class="nav-item">
-            <a href="#" data-toggle="modal" data-target="#terminosModal <?php echo getActive('terminosmodal')?>" class="nav-link custom-link">Términos & Condiciones</a>
-        </li>
+       
         <li class="nav-item">
             <a href="index.php?action=logout" class="nav-link custom-link <?php echo getActive('logout')?>">Cerrar Sesión</a>
         </li>

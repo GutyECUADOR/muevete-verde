@@ -44,7 +44,7 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
           <?php require_once 'sis_modules/navbarnotop.php'?>
 
           <div class="row flex-md-row card card-lg border-0 mb-0">
-            <div class="col-12 col-md-4 text-center text-dark primary-color-background">
+            <div class="col-12 col-md-4 text-center text-white tertiary-color-background">
               <div class="container">
                 <div class="row" style="min-height: 300px;">
                   <div class="container mt-4">
@@ -57,7 +57,7 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
                             echo '<img alt="Image" src="assets/img/'.$flag.'" class="w-25 zoom mb-3" />';
                           ?>
                           <h1 class="h2 mb-2"><?php echo $_SESSION["usuario_nombres".APP_UNIQUE_KEY] ?></h1>
-                          <span class="text-muted"><?php echo $_SESSION["usuario_cedula".APP_UNIQUE_KEY] ?></span>
+                          <span ><?php echo $_SESSION["usuario_cedula".APP_UNIQUE_KEY] ?></span>
                           
                           <input type="hidden" id="cedulaHidden" value="<?php echo $_SESSION["usuario_cedula".APP_UNIQUE_KEY] ?>"/>
                           <span class="h5 mt-2">

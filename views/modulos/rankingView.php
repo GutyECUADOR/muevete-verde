@@ -4,7 +4,7 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
  }   
 ?> 
 
-    <div id="app" class="main-container background-confedi">
+    <div id="app" class="main-container main-background">
       <section >
         <div class="container">
           <!--navbar-->

@@ -24,7 +24,7 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
       <?php require_once 'sis_modules/navbarnotop.php'?>
     
       <div class="row flex-md-row card card-lg border-0 justify-content-md-center bg-transparent">
-        <div class="col-12 col-md-4 card-body text-center text-dark primary-color-background">
+        <div class="col-12 col-md-4 card-body text-center text-white tertiary-color-background">
             <img alt="Image" src="https://ui-avatars.com/api/?bold=true&color=266fbf&background=f2ce3e&name=<?php echo $_SESSION["usuario_nombres".APP_UNIQUE_KEY]?>" class="mb-3 avatar avatar-lg" />
             <div class="media">
             <div class="media-body">
@@ -34,7 +34,7 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
                   echo '<img alt="Image" src="assets/img/'.$flag.'" class="w-25 zoom mb-3" />';
                 ?>
                 <h1 class="h2 mb-2"><?php echo $_SESSION["usuario_nombres".APP_UNIQUE_KEY] ?></h1>
-                <span class="text-muted"><?php echo $_SESSION["usuario_cedula".APP_UNIQUE_KEY] ?></span>
+                <span><?php echo $_SESSION["usuario_cedula".APP_UNIQUE_KEY] ?></span>
                 
                 <input type="hidden" id="cedulaHidden" value="<?php echo $_SESSION["usuario_cedula".APP_UNIQUE_KEY] ?>"/>
                 <span class="h5 mt-2">
