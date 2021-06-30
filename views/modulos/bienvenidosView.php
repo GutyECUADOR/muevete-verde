@@ -2,7 +2,7 @@
 <div class="main-container main-background">
   <div class="fireworksNO">
     <section class="height-100 flush-with-above" style="z-index: 2; padding:0px">
-      <div class="container text-white">
+      <div class="container text-white mt-5">
         <div class="row justify-content-between">
           <div class="col-12 text-center">
             <img alt="Image" src="assets/img/logo.png" class="w-75" />
@@ -66,14 +66,33 @@
 <script type="text/javascript" src="assets/js/bootstrap.js"></script>
 
 <!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
-<script type="text/javascript" src="assets/js/jquery.fireworks.js"></script>
+<!-- <script type="text/javascript" src="assets/js/jquery.fireworks.js"></script> -->
+<script type="text/javascript" src="assets/js/jquery.rotate.js"></script>
+<script type="text/javascript" src="assets/js/jquery.classyleaves.min.js"></script>
 
+<script>
+    $(document).ready(function() {
+        var tree = new ClassyLeaves({
+            leaves: 30,
+            maxY: -10,
+            multiplyOnClick: true,
+            multiply: 2,
+            infinite: true,
+            speed: 2000
+        });
+        $('body').on('click', '.addLeaf', function() {
+            console.log('8');
+            tree.add(8);
+            return false;
+        });
+    });
+</script>
 
-<script type="text/javascript" >
+<!-- <script type="text/javascript" >
   $('.fireworks').fireworks();
   $(function () {
           $('[data-toggle="popover"]').popover()
           $("#whatspopover").popover("show");
           $("#downloadpopover").popover("show");
         })
-</script>
+</script> -->
