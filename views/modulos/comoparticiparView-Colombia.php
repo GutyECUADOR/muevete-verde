@@ -13,7 +13,7 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
     <div class="container">
       <div class="row">
         <div class="col d-flex justify-content-center mt-5">
-          <img alt="Image" clsss="responsive-image" src="assets/img/logo.png"/>
+          <img alt="Image" clsss="responsive-image" src="assets/img/logo.png" style="width: 100%;"/>
         </div>
         
       </div>
@@ -28,7 +28,7 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
           <div class="container">
             <div class="row" style="min-height: 300px;">
               <div class="container mt-4">
-                <img alt="Image" src="https://ui-avatars.com/api/?bold=true&color=266fbf&background=f2ce3e&name=<?php echo $_SESSION["usuario_nombres".APP_UNIQUE_KEY]?>" class="mb-3 avatar avatar-lg" />
+                <img alt="Image" src="https://ui-avatars.com/api/?bold=true&color=fff&background=f2ce3e&name=<?php echo $_SESSION["usuario_nombres".APP_UNIQUE_KEY]?>" class="mb-3 avatar avatar-lg" />
                   <div class="media">
                   <div class="media-body">
                     <div class="mb-3">
@@ -90,7 +90,25 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
   <!--end of section-->
 </div>
 <!-- Modal Terminos -->
-<?php require_once 'modals/terminosModal.php'?>
+    <?php 
+        if ($_SESSION["usuario_pais".APP_UNIQUE_KEY]=='colombia'){
+            require_once 'modals/terminosModal-Colombia.php';
+        }
+    ?>
+    
+    <?php 
+        if ($_SESSION["usuario_pais".APP_UNIQUE_KEY]=='ecuador'){
+            require_once 'modals/terminosModal-Ecuador.php';
+        }
+    ?>
+    
+    <?php 
+        if ($_SESSION["usuario_pais".APP_UNIQUE_KEY]=='peru'){
+            require_once 'modals/terminosModal-Peru.php';
+        }
+    ?>
+
+
 
 <?php require_once 'modals/whatsapp.php'?>
 

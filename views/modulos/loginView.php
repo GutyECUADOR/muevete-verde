@@ -34,8 +34,14 @@ use App\Controllers\LoginController;
                     <span class="text-uppercase primary-color">Ingresa a tu cuenta y revisa tus puntos</span>
                    
                   </div>
+                  
+                  
                   <div class="row no-gutters justify-content-center">
                     <div class="text-left col-lg-8">
+                        <div class="text-center mt-3 mb-3">
+                            <span>¿Aun no te has registrado para la promoción? <a class="btn btn-success btn-block primary-color-background" href="?action=register&pais=<?php echo $pais?>">Regístrate aqui</a>
+                            </span>
+                        </div>
                       <form method="POST" autocomplete="off">
                         <?php 
                           $login->checkLogin(); 
@@ -53,10 +59,7 @@ use App\Controllers\LoginController;
                         <div class="text-center mt-3">
                           <button type="submit" class="btn btn-success btn-block primary-color-background">Ingresar</button>
                         </div>
-                        <div class="text-center mt-3 mb-3">
-                            <span>¿Aun no te has registrado para la promoción? <a class="primary-color" href="?action=register&pais=<?php echo $pais?>">Regístrate aqui</a>
-                            </span>
-                        </div>
+                        
                       </form>
                     </div>
                     
@@ -73,6 +76,11 @@ use App\Controllers\LoginController;
         <!--end of container-->
       </section>
       <!--end of section-->
+      
+     
+      
+      <!-- Modal Video  -->
+     <?php require_once 'modals/modalVideo.php'?>
       
       <!-- Whatsapp button  -->
       <?php require_once 'modals/whatsapp.php'?>
@@ -123,4 +131,16 @@ use App\Controllers\LoginController;
     <script type="text/javascript" src="assets/js/jquery.classyleaves.min.js"></script>
     <script type="text/javascript" src="assets/js/inithojas.js"></script>
 
+    <script type="text/javascript">
+      $(window).on('load', function() {
+          $('#modal-video').modal('show');
+
+          $("#modal-video").on('hidden.bs.modal', function (e) {
+            $("#modal-video iframe").attr("src", $("#modal-video iframe").attr("src"));
+        });
+      });
+    </script>
+    
+    
+   
       

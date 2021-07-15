@@ -13,7 +13,7 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
     <div class="container">
       <div class="row">
         <div class="col d-flex justify-content-center mt-5">
-          <img alt="Image" clsss="responsive-image" src="assets/img/logo.png"/>
+          <img alt="Image" clsss="responsive-image" src="assets/img/logo.png" style="width: 100%;"/>
         </div>
       </div>
       <!--navbar-->
@@ -27,7 +27,7 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
             <div class="container">
               <div class="row" style="min-height: 300px;">
                 <div class="container mt-4">
-                  <img alt="Image" src="https://ui-avatars.com/api/?bold=true&color=266fbf&background=f2ce3e&name=<?php echo $_SESSION["usuario_nombres".APP_UNIQUE_KEY]?>" class="mb-3 avatar avatar-lg" />
+                  <img alt="Image" src="https://ui-avatars.com/api/?bold=true&color=fff&background=f2ce3e&name=<?php echo $_SESSION["usuario_nombres".APP_UNIQUE_KEY]?>" class="mb-3 avatar avatar-lg" />
                     <div class="media">
                     <div class="media-body">
                       <div class="mb-3">
@@ -49,13 +49,13 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
                       </div>
                     </div>
                   </div>
-                </div>
                   
+                </div>
+                
               </div>
               
             </div>
 
-            
         </div>
         
         <!--end of col-->
@@ -102,12 +102,12 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
         <div class="col-12 col-md-2" style="background-color:#fff">
           <div class="container">
               <div class="text-center">
-                <h4 class="mb-3 mt-3" style="font-weight:bold; color:#266fbf; line-height: 2rem">BONOS </br>DIGITALES</h2>
+                <h4 class="mb-3 mt-3" style="font-weight:bold; color:#266fbf; line-height: 2rem">BONOS </br>DIGITALES<br>DE NETFLIX</h2>
               </div>
             <div class="row text-center">
                 <img alt="Image" src="assets/img/bonos-netflix.png" class="img-fluid rounded" style="display: block;margin-left: auto;margin-right: auto; width: 90%;" />  
             </div>
-            <div class="row text-center mt-4">
+            <div class="row text-center mt-2">
                 <img alt="Image" src="assets/img/ECUADOR_BONOS.png" class="img-fluid rounded" style="display: block;margin-left: auto;margin-right: auto; width: 85%;" />  
             </div>
           </div>
@@ -115,13 +115,57 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
        
       </div>
       <!--end of row-->
+        <div class="row flex-md-row card border-0 mb-0" style="background:#fff0">
+            <div class="col-md-4" style="background: rgb(242, 206, 62);" >
+                <div class="col-12 card-body text-center text-dark" style="background: rgb(242, 206, 62); padding: 10px;">
+                    <div class="col-12">
+                      <div class="container">
+                        <div class="row d-flex justify-content-center">
+                            <p>Promoción válida del 15 de julio al 30 de septiembre de 2021. <br> Aplican términos y condiciones.</p>
+                          
+                        </div>
+                        
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+           <div class="col-md-8  text-center text-dark border-0 text-white" style="background: #04BEF2; padding: 10px; height: 100px;">
+                
+              
+                
+                <img style='vertical-align:middle; max-width: 40px;' src='assets/img/bonos-netflix.png'>
+             
+                 <p style='vertical-align:middle; font-size: 23px; line-height: 19px;'>Por cada 36 puntos acumulados te enviaremos una cuenta de Netflix a tu correo.</p>
+                
+                
+            </div>
+            
+        </div>
     </div>
     <!--end of container-->
   </section>
   <!--end of section-->
 </div>
 <!-- Modal Terminos -->
-<?php require_once 'modals/terminosModal.php'?>
+<?php 
+        if ($_SESSION["usuario_pais".APP_UNIQUE_KEY]=='colombia'){
+            require_once 'modals/terminosModal-Colombia.php';
+        }
+    ?>
+    
+    <?php 
+        if ($_SESSION["usuario_pais".APP_UNIQUE_KEY]=='ecuador'){
+            require_once 'modals/terminosModal-Ecuador.php';
+        }
+    ?>
+    
+    <?php 
+        if ($_SESSION["usuario_pais".APP_UNIQUE_KEY]=='peru'){
+            require_once 'modals/terminosModal-Peru.php';
+        }
+    ?>
+
 
 <?php require_once 'modals/whatsapp.php'?>
 
@@ -139,7 +183,7 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
 <script>
   $(document).ready(function() {
     $('[data-toggle="popover"]').popover()
-    $("#whatspopover").popover("show");
+    $("#whatspopover").popover("hide");
     $("#tiendaramopopover").popover("show");
   });
 </script>

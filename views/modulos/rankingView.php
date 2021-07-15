@@ -23,7 +23,7 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
 
                     <div 
                       class="flipper" 
-                      data-datetime="2021-08-15 00:00:00"
+                      data-datetime="2021-09-30 00:00:00"
                       data-reverse="true" 
                       data-template="dd|HH|ii|ss" 
                       data-labels="Dias|Horas|Minutos|Segundos" 
@@ -48,7 +48,24 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
     </div>
     
      <!-- Modal Producto -->
-     <?php require_once 'modals/terminosModal.php'?>
+     <?php 
+        if ($_SESSION["usuario_pais".APP_UNIQUE_KEY]=='colombia'){
+            require_once 'modals/terminosModal-Colombia.php';
+        }
+    ?>
+    
+    <?php 
+        if ($_SESSION["usuario_pais".APP_UNIQUE_KEY]=='ecuador'){
+            require_once 'modals/terminosModal-Ecuador.php';
+        }
+    ?>
+    
+    <?php 
+        if ($_SESSION["usuario_pais".APP_UNIQUE_KEY]=='peru'){
+            require_once 'modals/terminosModal-Peru.php';
+        }
+    ?>
+
 
       <!-- Whatsapp button  -->
       <?php require_once 'modals/whatsapp.php'?>

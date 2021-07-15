@@ -37,8 +37,9 @@
   </head>
 
   <body>
-     
+          
     <?php
+        require_once './views/modulos/sis_modules/promo_banner.php';
         $routeController->actionCatcherController();
     ?>
      

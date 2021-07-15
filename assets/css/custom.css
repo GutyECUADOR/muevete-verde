@@ -52,7 +52,7 @@
 }
 
 .tertiary-color-background{
-  background-color:#023F88;
+  background-color:#04BEF2;
 }
 
 .quartary-color-background{
@@ -61,6 +61,10 @@
 
 .bg-transparent{
   background: transparent !important;
+}
+
+.responsive-image{
+    width: 100% !important;
 }
 
 

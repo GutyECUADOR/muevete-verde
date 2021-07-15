@@ -1,8 +1,8 @@
 
-<div class="container-fluid text-center" style="background-color: #e9092b">
-  <a href="https://tiendaramo.com/" target="_blank">
+<div class="container-fluid text-center" style="background-color: #000; padding:0px">
+  <a href="#">
    
-      <img src="assets/img/botontiendaramo.jpg" alt="Promo" style="max-height:40px; max-width: 100%;">
+      <img src="assets/img/banner.jpg" alt="Promo" style="max-width: 100%">
    
     
   </a>

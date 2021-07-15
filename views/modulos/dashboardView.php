@@ -14,31 +14,11 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
           
         <div class="row">
           <div class="col d-flex justify-content-center mt-5">
-            <img alt="Image" clsss="responsive-image" src="assets/img/logo.png"/>
+            <img alt="Image" clsss="responsive-image" src="assets/img/logo.png" style="width: 100%;"/>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col d-flex justify-content-center">
-           
-          
-            <a href="https://www.facebook.com/ProductosRamo" title="Facebook" target="_blank" class="btn btn-social-icon btn-facebook" style="border-radius: 50%; background-color:#f2ce3e">
-              <span class="fa fa-facebook" style="color:#266fbf"></span>
-            </a>
-            <a href="https://www.instagram.com/productosramo" title="Instagram" target="_blank" class="btn btn-social-icon btn-instagram" style="border-radius: 50%; background-color:#f2ce3e">
-              <span class="fa fa-instagram" style="color:#266fbf"></span>
-            </a>
-            <a href="https://twitter.com/ramocolombia" target="_blank" title="Twitter" class="btn btn-social-icon btn-twitter" style="border-radius: 50%; background-color:#f2ce3e">
-              <span class="fa fa-twitter" style="color:#266fbf"></span>
-            </a>
-            <a href="https://www.youtube.com/channel/UCv5QGIpsfM1xlPzp0F4RrFQ" title="Youtube" target="_blank" class="btn btn-social-icon btn-youtube" style="border-radius: 50%; background-color:#f2ce3e">
-              <span class="fa fa-youtube" style="color:#266fbf"></span>
-            </a>
-            <a href="tel:018000180535" target="_blank" title="Linea Nacional" class="btn btn-social-icon btn-youtube" style="border-radius: 50%; background-color:#f2ce3e">
-              <span class="fa fa-phone" style="color:#266fbf"></span>
-            </a>
-          </div>
-        </div>
+        <?php require_once 'sis_modules/header_main.php'?>
           
           <!--navbar-->
           <?php require_once 'sis_modules/navbarnotop.php'?>
@@ -48,7 +28,7 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
               <div class="container">
                 <div class="row" style="min-height: 300px;">
                   <div class="container mt-4">
-                    <img alt="Image" src="https://ui-avatars.com/api/?bold=true&color=266fbf&background=f2ce3e&name=<?php echo $_SESSION["usuario_nombres".APP_UNIQUE_KEY]?>" class="mb-3 avatar avatar-lg" />
+                    <img alt="Image" src="https://ui-avatars.com/api/?bold=true&color=ffffff&background=f2ce3e&name=<?php echo $_SESSION["usuario_nombres".APP_UNIQUE_KEY]?>" class="mb-3 avatar avatar-lg" />
                       <div class="media">
                       <div class="media-body">
                         <div class="mb-3">
@@ -57,8 +37,8 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
                             echo '<img alt="Image" src="assets/img/'.$flag.'" class="w-25 zoom mb-3" />';
                           ?>
                           <h1 class="h2 mb-2"><?php echo $_SESSION["usuario_nombres".APP_UNIQUE_KEY] ?></h1>
-                          <span ><?php echo $_SESSION["usuario_cedula".APP_UNIQUE_KEY] ?></span>
-                          
+                          <span><?php echo $_SESSION["usuario_cedula".APP_UNIQUE_KEY] ?></span>
+                         
                           <input type="hidden" id="cedulaHidden" value="<?php echo $_SESSION["usuario_cedula".APP_UNIQUE_KEY] ?>"/>
                           <span class="h5 mt-2">
                             <?php 
@@ -116,9 +96,18 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
                       <tr>
                         <th scope="col" style="font-size: 1rem">Fecha</th>
                         <th scope="col" style="font-size: 1rem">Punto de Venta</th>
-                        <th scope="col" style="font-size: 1rem">Factura</th>
+                        <th scope="col" style="font-size: 1rem">
+                        
+                            <?php 
+                                if ($_SESSION["usuario_pais".APP_UNIQUE_KEY] == 'peru') {
+                                    echo 'Boleta de compra';
+                                }else{
+                                    echo 'Factura';
+                                }
+                            ?>
+                        </th>
                         <th scope="col" style="font-size: 1rem">Valor</th>
-                        <th scope="col" style="font-size: 1rem">Cantidad</th>
+                        <th scope="col" style="font-size: 1rem">Puntos</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -149,7 +138,24 @@ if (!isset($_SESSION["usuario_cedula".APP_UNIQUE_KEY])){
       <!--end of section-->
     </div>
     <!-- Modal Terminos -->
-    <?php require_once 'modals/terminosModal.php'?>
+   
+    <?php 
+        if ($_SESSION["usuario_pais".APP_UNIQUE_KEY]=='colombia'){
+            require_once 'modals/terminosModal-Colombia.php';
+        }
+    ?>
+    
+    <?php 
+        if ($_SESSION["usuario_pais".APP_UNIQUE_KEY]=='ecuador'){
+            require_once 'modals/terminosModal-Ecuador.php';
+        }
+    ?>
+    
+    <?php 
+        if ($_SESSION["usuario_pais".APP_UNIQUE_KEY]=='peru'){
+            require_once 'modals/terminosModal-Peru.php';
+        }
+    ?>
 
     <?php require_once 'modals/whatsapp.php'?>
 
