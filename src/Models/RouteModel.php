@@ -24,6 +24,10 @@ class RouteModel {
                 $contenido = "views/modulos/dashboardView.php";
                 break;
 
+            case 'puntos':
+                $contenido = "views/modulos/puntosView.php";
+                break;    
+
             case 'comoparticipar':
                 if ($_SESSION["usuario_pais".APP_UNIQUE_KEY] == 'ecuador') {
                     $contenido = "views/modulos/comoparticiparView-Ecuador.php";
