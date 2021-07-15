@@ -11,7 +11,7 @@
             <div class="embed-responsive embed-responsive-16by9 mb-3" style="border-width: 4px; margin-top:5%; border-radius: 5px;">
             
             <?php if ($pais=='ecuador'){?>
-                <iframe class="embed-responsive-item" style="border: 6px solid #CCCCCC" src="https://youtube.com/embed/bOVpL6pNVbo?autoplay=1&controls=1&mute=1"></iframe>
+                <iframe class="embed-responsive-item" style="border: 6px solid #CCCCCC" src="https://youtube.com/embed/ywlWBlNTmiY?autoplay=1&controls=1&mute=1"></iframe>
             <?php }?>
             
             <?php if ($pais=='colombia'){?>
