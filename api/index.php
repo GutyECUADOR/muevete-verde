@@ -35,6 +35,10 @@ class ajax{
       return $this->ajaxController->getAllClientes();
     }
 
+    public function addPuntosCortesiaToAllUsers() {
+      return $this->ajaxController->addPuntosCortesiaToAllUsers();
+    }
+
     public function getUsuarioBy($valor) {
       return $this->ajaxController->getUsuarioBy($valor);
     }
@@ -86,6 +90,13 @@ class ajax{
 
       case 'getAllClientes':
         $respuesta = $ajax->getAllClientes();
+        $rawdata = array('status' => 'success', 'mensaje' => 'respuesta correcta', 'data'=> $respuesta);
+        echo json_encode($rawdata);
+
+      break;
+
+      case 'addPuntosCortesiaToAllUsers':
+        $respuesta = $ajax->addPuntosCortesiaToAllUsers();
         $rawdata = array('status' => 'success', 'mensaje' => 'respuesta correcta', 'data'=> $respuesta);
         echo json_encode($rawdata);
 

@@ -29,6 +29,12 @@ class AjaxController  {
         return $response;
     }
 
+    public function addPuntosCortesiaToAllUsers(){
+        $response = $this->ajaxModel->addPuntosCortesiaToAllUsers();
+        return $response;
+    }
+
+
     public function getUsuarioBy($valor){
         $response = $this->ajaxModel->getUsuarioBy($valor, 'cedula');
         return $response;

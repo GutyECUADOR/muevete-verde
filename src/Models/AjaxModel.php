@@ -79,6 +79,29 @@ class AjaxModel extends Conexion  {
 
             $stmt->execute();
 
+            $query = " 
+                INSERT INTO 
+                    pesos (puntoVenta, nombre, factura, cedula, valor, kilos, fecha)
+                VALUES (:puntoVenta, :nombre, :factura, :cedula, :valor, :kilos, :fecha)
+
+            ";  
+
+            $cortesia = 'Cortesia';
+            $facturacortesia = $cortesia.$cliente->cedula;
+            $valorcortesia = 0;
+            $kiloscortesia = 10;
+            $fechacortesia = date("Y-m-d");
+
+            $stmt = $this->instancia->prepare($query); 
+            $stmt->bindParam(':puntoVenta', $cortesia);
+            $stmt->bindParam(':nombre', $cortesia);
+            $stmt->bindParam(':factura', $facturacortesia); 
+            $stmt->bindParam(':cedula', $cliente->cedula);
+            $stmt->bindParam(':valor', $valorcortesia); 
+            $stmt->bindParam(':kilos', $kiloscortesia); 
+            $stmt->bindParam(':fecha', $fechacortesia); 
+            $stmt->execute();
+
             $commit = $this->instancia->commit();
             return array('status' => 'success', 'mensaje' => 'Registro correcto, ya puedes acceder al sistema.', 'commit'=>$commit);
             
@@ -126,6 +149,62 @@ class AjaxModel extends Conexion  {
                     $resulset = false;
                 }
             return $resulset;  
+
+        }catch(\PDOException $exception){
+            return array('status' => 'error', 'mensaje' => $exception->getMessage() );
+        }
+   
+    }
+
+    public function addPuntosCortesiaToAllUsers() {
+
+        $query = " 
+        SELECT 
+            *
+        FROM usuarios 
+        "; 
+
+        try{
+            $this->instancia->beginTransaction();  
+
+            $stmt = $this->instancia->prepare($query); 
+         
+                if($stmt->execute()){
+                    $resulset = $stmt->fetchAll( \PDO::FETCH_ASSOC );
+                    
+                }else{
+                    $resulset = false;
+                }
+
+                foreach ($resulset as $cliente) {
+                    $query = " 
+                        INSERT INTO 
+                            pesos (puntoVenta, nombre, factura, cedula, valor, kilos, fecha)
+                        VALUES (:puntoVenta, :nombre, :factura, :cedula, :valor, :kilos, :fecha)
+        
+                    ";  
+        
+                    $cortesia = 'Cortesia';
+                    $facturacortesia = $cortesia.$cliente['cedula'];
+                    $valorcortesia = 0;
+                    $kiloscortesia = 10;
+                    $fechacortesia = date("Y-m-d");
+        
+                    $stmt = $this->instancia->prepare($query); 
+                    $stmt->bindParam(':puntoVenta', $cortesia);
+                    $stmt->bindParam(':nombre', $cortesia);
+                    $stmt->bindParam(':factura', $facturacortesia); 
+                    $stmt->bindParam(':cedula', $cliente['cedula']);
+                    $stmt->bindParam(':valor', $valorcortesia); 
+                    $stmt->bindParam(':kilos', $kiloscortesia); 
+                    $stmt->bindParam(':fecha', $fechacortesia); 
+                    $stmt->execute();
+        
+                }
+
+                $commit = $this->instancia->commit();
+                return array('status' => 'success', 'mensaje' => 'Procesado con exito.', 'commit'=>$commit);
+            
 
         }catch(\PDOException $exception){
             return array('status' => 'error', 'mensaje' => $exception->getMessage() );

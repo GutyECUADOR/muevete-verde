@@ -57,6 +57,9 @@
 
     <!-- Modal Terminos -->
     <?php require_once 'modals/terminosModal.php'?>
+
+    <!-- Modal Terminos -->
+    <?php require_once 'modals/modal-textoPromo.php'?>
     
     
 
@@ -71,6 +74,11 @@
 <script type="text/javascript" src="assets/js/jquery.classyleaves.min.js"></script>
 <script type="text/javascript" src="assets/js/inithojas.js"></script>
 
+<script type="text/javascript">
+  $(window).on('load', function() {
+      $('#modal-textoPromo').modal('show');
+  });
+</script>
 
 <!-- <script type="text/javascript" >
   $('.fireworks').fireworks();
